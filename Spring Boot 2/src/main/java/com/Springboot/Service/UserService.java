@@ -1,14 +1,14 @@
 package com.Springboot.Service;
 
-import com.Springboot.Entity.User;
+import com.Springboot.Entity.Users;
 import org.springframework.stereotype.Service;
 
 
 public interface UserService {
 
-    User createUser(User user);
+    Users createUser(Users user);
 
-    User getUserId(Long userId);
+    Users getUserId(Long userId);
 
 
 }

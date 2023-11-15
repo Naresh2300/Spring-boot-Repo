@@ -1,7 +1,7 @@
 package com.Springboot.Service.Impl;
 
 import Repository.UserRepository;
-import com.Springboot.Entity.User;
+import com.Springboot.Entity.Users;
 import com.Springboot.Service.UserService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -27,18 +27,20 @@ import java.util.Optional;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserServiceImpl implements UserService {
-
+	
+	@Autowired
     private UserRepository userRepository;
 
     @Override
-    public User createUser(User user) {
+    public Users createUser(Users user) {
         return userRepository.save(user);
     }
 
     @Override
-    public User getUserId(Long userId) {
+    public Users getUserId(Long userId) {
 
-         Optional<User> optionalUser =userRepository.findById(userId);
-        return optionalUser.get() ;
+         Optional<Users> u1 = userRepository.findById(userId);
+         Users u2 = u1.get();
+         return u2;
     }
 }
