@@ -25,6 +25,7 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
